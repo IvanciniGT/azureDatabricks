@@ -252,3 +252,29 @@ def es_impar(numero):
 
 impares = filter(es_impar, numeros) # Apunta por ahí, que hay que filtrar los elementos de la colección, quedándote con los impares.
 print(list(impares))
+
+
+# EXPRESIONES LAMBDA
+# De entrada las expresiones lambda son expresiones.
+
+numero = 17; # statement: Sentencia/Enunciado/Oracion/Frase
+numero = 17 + 5; # Otro statement
+         ######  Expresión
+         # Una expresión es un trozo de código que devuelve un valor
+
+# Expresion lambda, es un trozo de código que devuelve un valor... qué valor?
+# El valor que devuelve es una función anónima declarada dentro de la propia expresión.
+
+def triplar(numero):
+    return numero * 3
+
+# Declaro una función, llamada triplar... que recibe un dato "numero" y devuelve "numero * 3"
+
+referencia_a_nueva_funcion = lambda numero: numero * 3
+# Es otra alternativa
+
+# Las funciones, las usamos para:
+# - Reutilizar código
+# - Organizar código y hacerlo más legible
+# - Para pasar código a una función (PROGRAMACION FUNCIONAL)
+

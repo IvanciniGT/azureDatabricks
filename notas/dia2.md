@@ -127,7 +127,7 @@ Con una linea de código, puedo retornar el listado de palabras más similares, 
 
 Un algoritmo Map reduce se basa en aplicar sobre una colección de datos de partida funciones tipo MAP (n) para acabar siempre con una función tipo REDUCE
 
-### Funciónes tipo MAP
+### Funciones tipo MAP
 
 Son funciones que se aplican sobre una colección de datos... y devuelven otra colección de datos... Colecciones de datos que soporten programación funcional.
 Las funciones tipo MAP se ejecutan en modo LAZY: PEREZOSO... es decir, realmente no se ejecutan hasta que no se requiere su resultado.
@@ -170,12 +170,3 @@ El trabajar de esta forma, permite PARALELIZAR LOS TRABAJOS
 Me da igual que los datos 1,2,3,4,5,6,7,8 se filtren en una máquina
 O que una máquina filtre los datos 1,2,3,4 -> 2,4 -> REDUCE  -> 6  \ 20
    Y otra máquina filtre los datos 5,6,7,8 -> 6,8 -> REDUCE  -> 14 /
-
-Apache Spark, lo que hace es esto...
-Yo le doy una colección de datos, de partida [1,2,3,4,5,6,7,8]... y le digo que sobre esos datos quiero aplicar un filter (dándole una función de filtrado)... y un reduce (dándole una función de reducción)
-
-Spark, toma esas anotaciones... y los datos... y los manda a una granja
-En la granja, un maestro recibe los datos y las anotaciones... y reparte el trabajo entre los trabajadores
-A un trabajador le mandará una parte de los datos... y las anotaciones ... y que curre...
-A otro trabajador le mandará otra parte de los datos... y las anotaciones ... y que curre...
-Y al final, cada uno de esos trabajadores acabará su parte... y el maestro recogerá los resultados... y los unirá... y me los devolverá
