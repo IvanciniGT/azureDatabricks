@@ -1,0 +1,3 @@
+[submodule "libreria_dnis"]
+	path = libreria_dnis
+	url = https://github.com/IvanciniGT/dniUtilsPython.git
