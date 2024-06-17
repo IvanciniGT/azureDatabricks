@@ -135,6 +135,10 @@ Hay muchas funciones tipo MAP:
 - MAP... Recibe una función, que aplica sobre cada elemento de la colección de partida... generando una nueva colección de salida, donde cada dato es el resultado de aplicar la función suministrada sobre el correspondiente elemento de la colección de entrada.
 - ORDER  Aplicada sobre una colección, devuelve otra colección ordenada según un criterio
 - FILTER Aplicada sobre una colección, devuelve otra colección con los elementos para los que la función de filtrado suministrada devuelve True
+- FlatMap: Es un map, seguido de un flatten
+           Aplica una función de transformación, sobre cada elemento (igual que hace el map)
+           PERO, esa función de transformación, debe devolver un objeto ITERABLE (colección)
+           Y una vez aplicadas las transformaciones individuales, todas las colecciones resultantes se unen en una única colección de salida
 - y otras 50
 
 ### Funciones tipo REDUCE
