@@ -198,16 +198,19 @@ WORKSPACE EN DATABRICKS
 WORKSPACE EN DATABRICKS
     shared---> REPO GIT principal
         cuaderno1 ---> REPO GIT (como submodulo del repo principal)
-        cuaderno2 ---> REPO GIT (como submodulo del repo principal)
+        cuaderno2 
         cuaderno3 ---> REPO GIT (como submodulo del repo principal)
     repos
         ivan ---> REPO GIT principal 
             cuaderno1 ---> REPO GIT (como submodulo del repo principal)
-            cuaderno2 ---> REPO GIT (como submodulo del repo principal) *
+            cuaderno2 
             cuaderno3 ---> REPO GIT(como submodulo del repo principal)
         menchu ---> REPO GIT principal
             cuaderno1 ---> REPO GIT (como submodulo del repo principal) *
-            cuaderno2 ---> REPO GIT (como submodulo del repo principal)
+                - Funcion de transformacion de datos
+                - Prueba de la función de transformación de datos
+                - Uso de la función de transformación de datos
+            cuaderno2 
             cuaderno3 ---> REPO GIT (como submodulo del repo principal)
         felipe 
             cuaderno3 ---> REPO GIT (como submodulo del repo principal)
@@ -237,3 +240,27 @@ Cuando hay un cambio
       - Llega un momento en que tengo eso listo para producción... Y el último commit que tengo en ese cuaderno lo etiqueto como v1.1.0
       - Y acto seguido, en el repo principal, digo que ahora para el cuaderno1 quiero la versión v1.1.0 en lugar de la v1.0.0 que tenía antes.
       - Los cambios que se estén haciendo en otros submodulos no de despliegan, ni se toman aún en el repo principal.
+
+----
+
+
+Me llega un parquet > 100 datos
+    -> Aplicas un programa que quite información sensible
+    Y estoy es lo que usais para las pruebas
+
+Incluso lo podeis ejecutar cada vez que hagais las pruebas con el parquet de la noche anterior, que lo guardais... por si han cambiado estructura
+
+
+El AZURE DEVOPS, cuando alguien haga un commit en su repo de un subcuaderno,
+  - Si el commit lleva asociado una etiqueta de versión
+    - Se lanzan las pruebas
+    - Si van bien, se pasa el commit a main
+    - Y en el proyecto principal (GORDO) se actualiza la versión del subcuaderno a la versión que se ha etiquetado en el commit
+
+REPO Libreria DNIs
+REPO ETL
+  Transformacion
+  Ejecución
+  Pruebas
+
+Pipeline en azuredevops
